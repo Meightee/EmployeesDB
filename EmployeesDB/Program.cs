@@ -108,10 +108,10 @@ namespace EmployeesDB
                 .Where(e => e.EmployeeId == id)
                 .ToArray();
             var sb = new StringBuilder();
-            sb.AppendLine($"Employee: {employees[0].FirstName} {employees[0].LastName} - {employees[0].JobTitle} \n");
+            sb.AppendLine($"{employees[0].FirstName} {employees[0].LastName} - {employees[0].JobTitle} \n");
             foreach (var e in employees)
             {
-                sb.AppendLine($"Name project: {e.ProjectName}\n ");
+                sb.AppendLine($"{e.ProjectName}\n ");
             }
             return sb.ToString().TrimEnd();
         }
